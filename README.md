@@ -8,15 +8,11 @@ interface tokenRecipient { function receiveApproval(address _from, uint256 _valu
 contract astorgame {
     string public name;
     string public symbol;
-//cantidad de decimales 3
     uint8 public decimals = 3;
     uint256 public totalSupply;
-//creamos un array con todos los balances
     mapping (address => uint256) public balanceOf;
     mapping (address => mapping (address => uint256)) public allowance;
-
     event Transfer(address indexed from, address indexed to, uint256 value);
-
     function astorgame() public {
         uint256 initialSupply=100000000;
         totalSupply =  initialSupply * 10 ** uint256(decimals);    
