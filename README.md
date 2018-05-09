@@ -1,0 +1,2 @@
+# Astor
+contract Astor token
