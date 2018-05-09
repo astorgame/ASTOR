@@ -1,6 +1,7 @@
-pragma solidity ^0.4.18;
-//Stder A.M.
-interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public;}
+pragma solidity ^0.4.18;  
+//Stder A.M.  
+interface tokenRecipient { function receiveApproval(address _from, uint256 _value, address _token, bytes _extraData) public;}  
+
 //variables publicas  
 contract astorgame{  
     string public name;  
@@ -9,14 +10,17 @@ contract astorgame{
     uint256 public totalSupply;  
     mapping (address => uint256) public balanceOf;  
     mapping (address => mapping (address => uint256)) public allowance;  
+    
     event Transfer(address indexed from, address indexed to, uint256 value);  
-    function astorgame() public {
-        uint256 initialSupply=100000000;
-        totalSupply =  initialSupply * 10 ** uint256(decimals);    
-        balanceOf[msg.sender] = totalSupply;                
-        name = "astorgame";                                  
-        symbol = "ASTOR";                               
-    }
+    
+    function astorgame() public {  
+        uint256 initialSupply=100000000;  
+        totalSupply =  initialSupply * 10 ** uint256(decimals);  
+        balanceOf[msg.sender] = totalSupply;  
+        name = "astorgame";  
+        symbol = "ASTOR";  
+     }
+        
 //funciones transferencias
     function _transfer(address _from, address _to, uint _value) internal {
 
