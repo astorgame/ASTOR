@@ -4,10 +4,10 @@ interface tokenRecipient { function receiveApproval(address _from, uint256 _valu
 
 //variables publicas  
 contract astorgame{  
-    string public name;  
-    string public symbol;  
-    uint8 public decimals = 3;  
-    uint256 public totalSupply;  
+        string public name;  
+        string public symbol;  
+        uint8 public decimals = 3;  
+        uint256 public totalSupply;  
     mapping (address => uint256) public balanceOf;  
     mapping (address => mapping (address => uint256)) public allowance;  
     
